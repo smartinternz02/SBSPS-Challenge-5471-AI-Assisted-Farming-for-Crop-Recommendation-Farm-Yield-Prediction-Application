@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="static/styles/style.css">
+    <!--<script src="static/out.js"></script>-->
+    <title>FARM PREDICTION</title>
+</head>
+<body>
+    <div class="container">
+        <div class="title">
+            AI Powered CROP RECOMMENDATION
+        </div>
+        <form action="#">
+            <div class="parameters">
+                <div class="input-box">
+                    <span class="details">TEMPERATURE</span>
+                    <input type="text" placeholder="Temperature(Celcius)" id="temp" required >
+                </div>
+                <div class="input-box">
+                    <span class="details">HUMIDITY</span>
+                    <input type="text" placeholder="Enter Humidity" required>
+                </div>
+                <div class="input-box">
+                    <span class="details">PH VALUE</span>
+                    <input type="text" placeholder="PH value" required>
+                </div>
+                <div class="input-box">
+                    <span class="details">RAINFALL</span>
+                    <input type="text" placeholder="Enter Rainfall amount" required>
+                </div>
+                <div class="input-box">
+                    <span class="details">NITROGEN</span>
+                    <input type="text" placeholder="NITROGEN amount" required>
+                </div>
+                <div class="input-box">
+                    <span class="details">PHOSPHORUS</span>
+                    <input type="text" placeholder="PHOSPHORUS amount" required>
+                </div>
+                <div class="input-box">
+                    <span class="details">POTASSIUM</span>
+                    <input type="text" placeholder="POTASSIUM amount" required>
+                </div>
+            </div>
+            <div class="button">
+                <input type="submit" value="PREDICT" onclick="btn()">
+            </div>
+        </form>
+    </div>
+
+    <div class="containers">
+        <div class="titles">
+            <p>------PERFECT CROP------<span id="sp"></span> </p>
+        </div>
+    </div>
+
+    <div class="containers">
+        <div class="titles">
+            <p>-----MARKET VALUE-----<span id="sy"></span> </p>
+        </div>
+    </div>
+    <script>
+        function btn(){
+            var text1;
+            var num;
+            var t=temp.value;
+            if(t>26 && t<=30){
+                text1="RICE";
+                num="732.16 INR/Quintal";
+            }
+            else if(t>=18 && t<25){
+                text1="MAIZE";
+                num="592.17 INR/Quintal";
+            }
+            else if(t>=25 && t<=26){
+                text1="CHICK PEA";
+                num="578.63 INR/Quintal";
+            }
+            else if(t==15){
+                text1="MUNG BEANS";
+                num="8032.45 INR/Quintal";
+            }
+            else if(t<17 && t>12){
+                text1="GRAPES";
+                num="2021.25 INR/Quintal";
+            }
+            else if(t>30){
+                text1="MANGO"
+                num="6990.00 INR/Quintal";
+            }
+            else{
+                text1="Insufficient Values!";
+                num="Insufficient Values!";
+            }
+            document.getElementById("sp").innerHTML=text1;
+            document.getElementById("sy").innerHTML=num;
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,123 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Calibri';
+    background: linear-gradient(135deg,rgb(111, 172, 252),rgb(94, 94, 236));
+}
+.container{
+    max-width: 700px;
+    width: 100%;
+    background:rgb(179, 178, 178);
+    padding: 25px 30px;
+    border-radius: 5px;
+}
+.container .title{
+    font-size: 25px;
+    font-weight: 500;
+    background-color: rgb(215, 196, 253);
+    width: fit-content;
+    left: 15%;
+    position: relative;
+}
+
+
+.container form .parameters{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 20px 0px 12px 0px;
+}
+
+form .parameters .input-box{
+    margin-bottom: 15px;
+    width: calc(100%/2-20px);
+}
+
+.parameters .input-box .details{
+    display: block;
+    font-weight: 500;
+    margin-bottom: 5px;
+}
+
+.parameters .input-box input{
+    height: 45px;
+    width: 95%;
+    outline: none;
+    border-radius: 5px;
+    border:1px solid #ccc;
+    padding-left: 15px;
+    font-size: 16px;
+    border-bottom-width: 1px;
+}
+
+.parameters .input-box input:focus,
+.parameters .input-box .input:valid{
+    border-color: rgb(205, 106, 102);
+}
+
+form .button{ 
+    height: 45px;
+    width: 45px 0px;
+}
+
+form .button input{
+    height: 100%;
+    width: 100%;
+    outline: none;
+    color:#fff;
+    border: none;
+    font-size: 18px;
+    font-weight: 500;
+    border-radius: 5px;
+    letter-spacing: 1px;
+    background: linear-gradient(135deg,rgb(4, 180, 4),green);
+}
+form .button input:hover{
+    background: linear-gradient(-135deg,rgb(4, 180, 4),green);
+}
+@media (max-width: 584px) {
+    .container{
+        max-width: 100%;
+    }
+    form .parameters .input-box{
+        margin-bottom: 15px;
+        width: 100%;
+    }   
+}
+.container form .parameters{
+    max-height: 350px;
+    overflow-y:scroll;
+}
+.titles{
+    font-size: 25px;
+    font-weight: 500;
+    background-color: rgb(10, 119, 161);
+    width: fit-content;
+    left: 15%;
+    position: relative;
+    height: 100px;
+}
+
+.titles span{
+    font-size: 50px;
+    text-align: center;
+}
+.containers .titles{
+    width: 300px;
+    height: 150px;
+    background:rgb(179, 178, 178);
+    font-weight: bold;
+}
+
+.containers .titles p{
+    text-align: center;
+    color:black;
+}
+
